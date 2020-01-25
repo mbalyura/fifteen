@@ -1,0 +1,46 @@
+body {
+  background: linear-gradient(to right, rgb(240, 63, 63), rgb(44, 44, 241));
+}
+
+.title {
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(216, 216, 214);
+  font-size: xx-large;
+}
+
+div.gem-puzzle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+table {
+  /* margin: auto; */
+  width: 400px;
+  height: 400px;
+  color: rgb(245, 245, 243);
+  text-align: center;
+  font-size: x-large;
+  font-family: Verdana, Tahoma, serif;
+  /* background-color: burlywood; */
+  /* border-radius: 15px; */
+  /* border: 3px solid brown; */
+
+}
+
+.cell {
+  width: 25%;
+  background-color: rgb(99, 99, 99);
+  border: 1px solid rgb(54, 54, 54);
+  border-radius: 5px;
+}
+
+.empty-cell {
+  background-color: transparent;
+  border: none;
+}
