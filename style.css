@@ -1,15 +1,23 @@
 body {
   background: linear-gradient(to right, rgb(240, 63, 63), rgb(44, 44, 241));
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
 }
 
-.title {
+.heading {
   cursor: pointer;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: rgb(216, 216, 214);
   font-size: xx-large;
+  text-align: center;
+  color: rgb(230, 230, 230);
+}
+
+.heading2 {
+  font-size: medium;
+  text-align: center;
+  color: rgb(230, 230, 230);
 }
 
 div.gem-puzzle {
@@ -20,27 +28,57 @@ div.gem-puzzle {
 }
 
 table {
-  /* margin: auto; */
-  width: 400px;
-  height: 400px;
-  color: rgb(245, 245, 243);
+  width: 500px;
+  height: 500px;
+  padding: 3px;
+  border-radius: 10px;
+  border-spacing: 5px;
   text-align: center;
   font-size: x-large;
   font-family: Verdana, Tahoma, serif;
-  /* background-color: burlywood; */
-  /* border-radius: 15px; */
-  /* border: 3px solid brown; */
-
+  color: rgb(245, 245, 243);
+  /* border: 1px solid rgb(65, 65, 65); */
+  background-color: rgba(245, 245, 245, 0.164);
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .cell {
   width: 25%;
+  cursor: pointer;
+  border-radius: 8px;
   background-color: rgb(99, 99, 99);
-  border: 1px solid rgb(54, 54, 54);
-  border-radius: 5px;
+  border: 1px solid rgba(65, 65, 65, 0.616);
+  box-shadow: inset 2px 2px 3px 1px rgba(116, 116, 116, 0.5), 
+  inset -2px -2px 3px 1px rgba(65, 65, 65, 0.3)
 }
 
 .empty-cell {
+  cursor: default;
   background-color: transparent;
   border: none;
+  box-shadow: none;
+}
+
+.rainbow {
+  animation: rainbow 3s linear 0s infinite;
+}
+
+@keyframes rainbow {
+  0%,100% {color: pink}
+  15% {color: orange}
+  30% {color: yellow}
+  45% {color:lime}
+  60% {color: cyan}
+  75% {color: skyblue}
+  90% {color: violet}
+}
+
+@media (max-width: 600px), (max-height: 600px) {
+  table {width: 400px; height: 400px;}
+  .title {font-size: large;}
+}
+
+@media (max-width: 500px), (max-height: 500px) {
+  table {width: 350px; height: 350px;}
+  .title {font-size: large;}
 }
