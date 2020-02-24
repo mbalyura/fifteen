@@ -1,5 +1,10 @@
 body {
   background: linear-gradient(to right, rgb(240, 63, 63), rgb(44, 44, 241));
+  color: whitesmoke;
+  text-align: center;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, serif;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
   -khtml-user-select: none;    /* Konqueror */
@@ -7,20 +12,24 @@ body {
   -ms-user-select: none;       /* Internet Explorer/Edge */
 }
 
+.container {
+    /* height: 100vh;
+    display: flex;
+    flex-direction: column; */
+    /* background-color: rgba(238, 130, 238, 0.836); */
+}
+
 .heading {
+  margin-top: 3%;
   cursor: pointer;
   font-size: xx-large;
-  text-align: center;
-  color: rgb(230, 230, 230);
 }
 
-.heading2 {
+.subheadind {
   font-size: medium;
-  text-align: center;
-  color: rgb(230, 230, 230);
 }
 
-div.gem-puzzle {
+.table-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,15 +37,13 @@ div.gem-puzzle {
 }
 
 table {
+  /* margin: auto; */
   width: 500px;
   height: 500px;
   padding: 3px;
   border-radius: 10px;
   border-spacing: 5px;
-  text-align: center;
   font-size: x-large;
-  font-family: Verdana, Tahoma, serif;
-  color: rgb(245, 245, 243);
   /* border: 1px solid rgb(65, 65, 65); */
   background-color: rgba(245, 245, 245, 0.164);
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
@@ -59,8 +66,36 @@ table {
   box-shadow: none;
 }
 
+.result-container {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  bottom: 10%;
+  left: 50%
+}
+
 .rainbow {
   animation: rainbow 3s linear 0s infinite;
+}
+
+.github {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  bottom: 3%;
+  left: 50%
+}
+
+path {
+  fill: whitesmoke;
+}
+
+.heading:hover {
+  color: white;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+
+svg:hover {
+  fill: white;
+  filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 0.5));
 }
 
 @keyframes rainbow {
@@ -80,5 +115,10 @@ table {
 
 @media (max-width: 500px), (max-height: 500px) {
   table {width: 350px; height: 350px;}
+  .title {font-size: large;}
+}
+
+@media (max-width: 400px), (max-height: 400px) {
+  table {width: 300px; height: 300px;}
   .title {font-size: large;}
 }
